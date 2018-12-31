@@ -21,4 +21,5 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('posts/{id}/edit', ['as' => 'admin.posts.edit' , 'uses'=> 'AdminPostsController@show']);
     Route::post('posts', ['as' => 'admin.posts.store'  , 'uses' => 'AdminPostsController@store']);
     Route::patch('posts/{id}',    ['as' => 'admin.posts.update', 'uses' => 'AdminPostsController@update']);
+    Route::delete('posts/{id}'  , ['as' => 'admin.posts.destroy', 'uses' => 'AdminPostsController@destroy']);
 });
